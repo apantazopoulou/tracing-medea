@@ -1,10 +1,12 @@
 display_name,stub,dropdown_parent
 Home,/
-Browse,/browse.html
-Subjects,/subjects.html
-Locations,/locations.html
-Map,/map.html
-Timeline,/timeline.html
-Data,/data.html
-About,/about.html
-Play,/mojada.html
+Region,,
+Americas,/americas.html,Region
+Europe,/europe.html,Region
+Theme,/theme.html
+Building,/building.html
+Archive,/archive.html
+Data,/data.html,Archive
+Credits,,
+About the Project,/credits.html,Credits
+People,/people.html,Credits
