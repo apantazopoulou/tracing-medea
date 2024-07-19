@@ -1,4 +1,26 @@
-# CollectionBuilder-GH
+# Tracing Medea
+
+## Documentation: Instructions
+
+See `readme_instructions.md` in the repository for instructions on editing and adding basic content files.
+
+## Next Steps: Site Content
+1. **Build out content**. Create play content pages following instructions provided by Wiebke Kuhn and Sam Munch in `readme_instructions.md`.
+2. **Update play metadata** following the template and examples in `_data/play-demo-metadata.csv`. Use file name "play-demo-metadata.csv" for new csv files to avoid changing the website datasource.
+3. **Add photos** to `/assests/img/` directory. If image should be included in a map popup, make sure to update the .csv file with the file name and extension and file type following the model provided.
+
+## Next Steps: Site Coding & Architecture
+Suggested by Stella Fritzell (GitHub: sfritzell) following work at 2024 ILiADS:
+
+1. **Create page layout template** for markdown content with embeded map: A non-functioning possibility can be found at `_layouts/page-map.html` in Stella's forked repository (`sfritzell/tracing-medea`)
+2. **Standardize metadata CSV** to follow template established in `_data/play-demo-metadata.csv`. New fields can be added, but caution should be observed with field names (refer to [Collection Builder documentation](https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/). Use file name "play-demo-metadata.csv" for new csv files to avoid changing the website datasource. If changing the file name, update in `_config.yml`.
+3. **Fix image thumnail display** in map popups. This likely an issue with the `_includes/js/map-js.html` and / or the `_data/play-demo-metadata.csv` files and referenced file paths. Code currently appears to be recognizing file path and type for the stored images, but is failing to reference the image itself. Collection Builder site code should already be scaling the image correctly regardless of file type (jpeg, sgv, etc), so this is probably not the issue.
+4. **Create map subject layers**. Should occur in `_includes/js/map-js.html file`. Should be possible with `L.layerGroup()` and using something like `feature.properties.subject.includes("dictonary value")` as a filter.
+5. **Set regional map focus** on region pages. Dependent on item 1 (page layout template) and assigning template in yaml header for each regional landing page. There is a Collection Builder discussion on [filtering a map](https://github.com/orgs/CollectionBuilder/discussions/104) for different pages that would be a good starting point.
+
+---
+
+# About CollectionBuilder-GH
 
 A project to generate a free and simple digital collection site using [GitHub Pages](https://pages.github.com/) given:
 
